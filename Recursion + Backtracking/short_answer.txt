@@ -1,0 +1,67 @@
+Author: Theo Snoey
+Textfile answers to Recursive Backtracking assignment.
+
+Warmup
+------
+Q1. What is the value of `totalMoves` after stepping over the call to `moveTower` in `hanoiAnimation`?
+A1. The value of totalMoves is 15
+
+Q2. What is the value of the `totalMoves` variable after stepping over the first recursive sub-call?
+(In other words, within `moveTower` and just after stepping over the first recursive sub-call
+to `moveTower` inside the `else` statement.)
+A2. The value of totalMoves is 7
+
+Q3. After breaking at the base case of `moveTower` and then choosing Step Out, where do you end up?
+(What function are you in, and at what line number?)
+What is the value of the `totalMoves` variable at this point?
+A3. I end up in move tower on line 79. The value of total moves at this point is 1
+
+Q4. What is the smallest possible input that you used to trigger the bug in the program?
+A4. The smallest possible input that was able to trigger the bug was a vector with only the int 1 in it.
+
+Q5. Identify the one-character error in the code and explain why that bug causes the function
+to return the output you see when running on the minimal input you listed above.
+You should be able to specifically account for how the error causes the result to
+change from “completely correct” to “terribly wrong.”
+A5. the one character errror in the code was the equals sign (=) in between the + and the v[index] in the with call
+in buggyCount. Becasue of the += we were assigning sumSoFar to be equal to the sum + the index instead of just calling it with an
+increased index. Because of this, when we called the without function call, it was like we were calling the with function call twice
+because sumSoFar had been increased by the amount of the value at the vector's index.
+
+Predict
+-------
+Q6. In your own words, describe some of the specific drawbacks to using global variables
+and explain why a program-wide constant like keypad does not suffer from the same 
+drawbacks.
+A6. Unlike constants, global variables can't be changed. In our keypad, is a constant and thus cant be changed, so there is no risk of accidentally
+manipulating the map of keys and messing up the process of getting data from our constant map.
+
+Voting power
+------------
+Q7.What is the Big O of `computePowerIndex`? Include your timing data and explain how it supports your reasoning.
+A7. TODO...The big O of computePowerIndex is N(N2^N)
+
+Q8. Use the Big O and timing data to estimate how long it would take to compute the power index for the 51 voting blocks in the U.S. Electoral College.
+A8. the Big O timing data confirmed my hypothesis, the time increases exponentially as the input size gets inputted.
+
+Redistrict
+----------
+Q9. A leader of a political party in your hometown learns you just took CS106B.
+They offer you a job working on cutting-edge software that applies algorithms to optimize
+gerrymandering during the process of redistricting.
+
+What questions might you ask about this job before making a decision? What might be the drawbacks?
+Which communities would be affected by the work you're doing?
+
+Please write your list of 3-5 questions and be sure to include ethical considerations.
+A9.
+
+I don't think I would have any questions about taking the job. I wouldn't take the job period. Jerrymandering
+Is a terrible practice that disenfranchises voters and suppresses democratic rights (our voices). I would have ethical
+conscerns with working there. That work would certainly affect communities whose voices have been histlrically suppressed
+by districting states in a way that renders their combined voices ineffective democratically.
+
+If I had to access some questions they would be:
+Who are we affecting with this jerrymandering?
+What states are we affecting (battle ground states or ones whose votes are basically guaranteed)?
+How much would this work disenfranchise people?
